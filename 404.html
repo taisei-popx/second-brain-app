@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+    var base = '/second-brain-app';
+    var path = window.location.pathname;
+    if (path.startsWith(base)) {
+      var route = path.slice(base.length);
+      window.location.replace(base + '/?p=' + encodeURIComponent(route + window.location.search));
+    }
+  </script>
+</head>
+<body></body>
+</html>
